@@ -5,50 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="v19twLq1vsxxadbmuw2XZeJhP79a8cd3uHj1l-VFX58" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3934206444145241" crossorigin="anonymous"></script>
-  <title>診断ラボ｜無料性格診断アプリ</title>
-  <meta name="description" content="社畜診断・恋愛診断・子育て診断の3種類の無料診断アプリ。あなたのタイプを診断しよう！" />
+  <title>診断の森｜無料の性格・心理診断アプリ</title>
+  <meta name="description" content="診断の森は、社畜・恋愛・子育てなど身近なテーマをネタ全振りで診断できる無料の診断サイト。100体以上の診断モンスターが登場。会員登録不要・すべて無料。" />
+  <meta property="og:title" content="診断の森｜無料の性格・心理診断アプリ" />
+  <meta property="og:description" content="社畜・恋愛・子育ての本性をネタ全振りで診断。100体以上の診断モンスターが登場！" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://pgdhaev4.github.io/" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Hiragino Sans', 'Meiryo', sans-serif; background: #f8f9fa; color: #333; }
-    .hero { text-align: center; padding: 60px 20px 40px; }
-    .hero h1 { font-size: 2rem; font-weight: bold; margin-bottom: 12px; }
-    .hero p { font-size: 1rem; color: #666; }
-    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 900px; margin: 0 auto 60px; }
-    .card { background: #fff; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); padding: 32px 24px; width: 260px; text-align: center; text-decoration: none; color: #333; transition: transform .2s; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Hiragino Sans', 'Noto Sans JP', 'Meiryo', sans-serif;
+      background: #0d0d12; color: #fff; line-height: 1.7;
+    }
+    .hero {
+      background: linear-gradient(160deg, #0a0a14 0%, #1a0a2e 40%, #0d1a3a 100%);
+      text-align: center; padding: 56px 20px 40px;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 8vw, 3rem); font-weight: 900; margin-bottom: 14px;
+      background: linear-gradient(135deg, #fff 0%, #e0cfff 50%, #ffd6e7 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,0.72); }
+    .intro {
+      max-width: 720px; margin: 0 auto; padding: 28px 20px 8px;
+      color: rgba(255,255,255,0.75); font-size: 0.92rem;
+    }
+    .intro h2 { font-size: 1.05rem; color: #e0cfff; margin-bottom: 8px; font-weight: 800; }
+    .cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 24px 20px 48px; max-width: 900px; margin: 0 auto; }
+    .card {
+      background: #16161e; border: 1px solid rgba(255,255,255,0.07); border-radius: 18px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3); padding: 30px 24px; width: 260px;
+      text-align: center; text-decoration: none; color: #fff; transition: transform .2s;
+    }
     .card:hover { transform: translateY(-4px); }
     .card .emoji { font-size: 3rem; margin-bottom: 12px; display: block; }
-    .card h2 { font-size: 1.1rem; font-weight: bold; margin-bottom: 8px; }
-    .card p { font-size: 0.85rem; color: #888; margin-bottom: 16px; }
-    .card .btn { display: inline-block; padding: 10px 24px; border-radius: 999px; font-size: 0.9rem; font-weight: bold; color: #fff; }
-    .card:nth-child(1) .btn { background: #ff6b35; }
-    .card:nth-child(2) .btn { background: #c471ed; }
-    .card:nth-child(3) .btn { background: #e8436a; }
+    .card h3 { font-size: 1.1rem; font-weight: bold; margin-bottom: 8px; }
+    .card p { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 18px; }
+    .card .btn { display: inline-block; padding: 11px 26px; border-radius: 999px; font-size: 0.9rem; font-weight: bold; color: #fff; }
+    .card:nth-child(1) .btn { background: linear-gradient(135deg, #1e3a5f, #2563eb); }
+    .card:nth-child(2) .btn { background: linear-gradient(135deg, #6a1b9a, #e91e63); }
+    .card:nth-child(3) .btn { background: linear-gradient(135deg, #9b1d3a, #f97316); }
+    .site-footer {
+      text-align: center; padding: 28px 16px; color: rgba(255,255,255,0.35);
+      font-size: 0.78rem; border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .site-footer a { color: rgba(255,255,255,0.5); text-decoration: none; margin: 0 8px; }
+    .site-footer a:hover { color: rgba(255,255,255,0.8); }
   </style>
 </head>
 <body>
   <div class="hero">
-    <h1>🎯 診断ラボ</h1>
-    <p>無料の性格診断アプリ3種類。あなたのタイプを診断しよう！</p>
+    <h1>🌿 診断の森</h1>
+    <p>無料の性格・心理診断アプリ。あなたの本性、バレます。</p>
   </div>
+
+  <div class="intro">
+    <h2>診断の森とは？</h2>
+    <p>「診断の森」は、社畜・恋愛・子育てといった身近なテーマを、ネタ全振りで楽しく診断できる無料の診断サイトです。各診断は数問の質問に答えるだけ。あなたのタイプを、100体以上の個性豊かな「診断モンスター」が判定します。会員登録は不要で、すべて無料でご利用いただけます。診断結果はSNSでシェアして友達と盛り上がれます。</p>
+  </div>
+
   <div class="cards">
     <a href="https://pgdhaev4.github.io/shindan/workplace_app/" class="card">
       <span class="emoji">💼</span>
-      <h2>社畜診断</h2>
-      <p>あなたの社畜度は？8タイプの職場キャラを診断</p>
+      <h3>会社モンスター診断</h3>
+      <p>あなたの社畜度は？職場の本性を8タイプで診断</p>
       <span class="btn">診断する</span>
     </a>
     <a href="https://pgdhaev4.github.io/shindan/psychology_app/" class="card">
       <span class="emoji">💖</span>
-      <h2>恋愛・性格診断ラボ</h2>
+      <h3>恋愛沼診断</h3>
       <p>恋愛タイプ・MBTI・相性など7種類の診断</p>
       <span class="btn">診断する</span>
     </a>
     <a href="https://pgdhaev4.github.io/shindan/kosodate_app/" class="card">
       <span class="emoji">👨‍👩‍👧</span>
-      <h2>子育て親タイプ診断</h2>
-      <p>あなたの育児スタイルを診断。4テーマ対応</p>
+      <h3>子育て親タイプ診断</h3>
+      <p>あなたの育児スタイルを診断。6テーマ対応</p>
       <span class="btn">診断する</span>
     </a>
   </div>
+
+  <footer class="site-footer">
+    <a href="./privacy.html">プライバシーポリシー</a>
+    <a href="./terms.html">利用規約</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScsoVHfBBBLw7OT9wyXw29MJz9JEDJ73M8UGyjyBpnbPsGYzQ/viewform" target="_blank" rel="noopener">お問い合わせ</a>
+    <p style="margin-top:10px">運営者：AIソリューション</p>
+    <p style="margin-top:4px">© 2026 診断の森</p>
+  </footer>
 </body>
 </html>
