@@ -10,46 +10,43 @@
   gtag('config', 'G-9KJMDN86W9');
 </script>
 <!--
-  診断の森 ホーム（2026-10-24 作り直し）
-  オーナー指示「ホーム画面が2つある。会社モンスター診断から『診断トップ』に行くと新たなホーム画面が出てくる。そちらは削除。ただし背景色だけこちらが良い（少し濃い緑）」
-  → 旧トップ（濃い緑のヒーロー＋5診断＋寄り道＋読みもの＋スタンプ＋診断の森について）と、5診断の入口ページ（/shindan/kokoro_app/）が
-    ほぼ同じ中身の「ホーム」として2つあった。入口ページの中身をホームにし、上部（ヒーロー）だけ旧トップの濃い緑にした。
-    /shindan/kokoro_app/ は、このホームへ自動で移る。旧トップの控え＝_bak_ホーム統合前_20261024\index.html
-  ★このページはルート（https://pgdhaev4.github.io/）と /shindan/ の両方に置く（publish_v2.ps1）。リンクはすべて絶対パス。
+  診断の森 ホーム（2026-10-24 作り直し → 同日夜 全体改修指示で3カテゴリーに再構成）
+  ・3カテゴリー＝①今の悩みを整理する診断（5）②ちょっと笑える・タイプ診断（17＝会社4・恋愛7・子育て6）③明日を少し楽にする読みもの（40）
+  ・タイプ診断は、シリーズごとに代表2つを出し、残りは「すべての診断を見る」（<details>）で開く＝17すべてにホームから直接行ける・最初は情報過多にしない
+  ・上部の「診断を選ぶ↓」と目次のボタンは 10/24 夜のオーナー指示で削除済み（スクロールで見られる）＝足さない。冒頭を短くして①の見出しが最初の画面に入るようにした
+  ・#yorimichi・#yomimono・#shindan・#stamp の id は、ほかのページからのリンク先なので残す
+  ★このページはルート（https://pgdhaev4.github.io/）と /shindan/ の両方に置く（publish_v2.ps1）。リンクはすべて絶対パス。改修前の控え＝_bak_全体再構築前_20261024\index.html
 -->
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="v19twLq1vsxxadbmuw2XZeJhP79a8cd3uHj1l-VFX58" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>診断の森｜疲れているときに、心が軽くなる診断</title>
-  <meta name="description" content="疲れているときに、心が軽くなる診断。今の悩みの要因を整理し、心理学的な視点も含めて分析したうえで、具体的な対処法を提案します。会社を辞めるか迷っている・職場の人付き合いに疲れた・結婚を焦ってしまう・恋愛で自信をなくした・子育てに疲れた、の5診断。無料・登録不要。">
-  <meta property="og:title" content="診断の森｜疲れているときに、心が軽くなる診断">
-  <meta property="og:description" content="今の悩みの要因を整理し、心理学的な視点も含めて分析したうえで、具体的な対処法を提案します。6〜9問・約2分。無料・登録不要。">
+  <title>診断の森｜悩みを整理する診断・笑えるタイプ診断・読みもの</title>
+  <meta name="description" content="気持ちを整理したい日も、ちょっと笑いたい日も。仕事・人付き合い・子育て・恋愛・結婚の悩みを整理する「今の悩みを整理する診断」、自分をキャラにたとえて笑える「タイプ診断」17種類、明日を少し楽にする読みもの40本。無料・登録不要。">
+  <meta property="og:title" content="診断の森｜悩みを整理する診断・笑えるタイプ診断・読みもの">
+  <meta property="og:description" content="気持ちを整理したい日も、ちょっと笑いたい日も。今の悩みを整理する診断5種類・笑えるタイプ診断17種類・読みもの40本。無料・登録不要。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://pgdhaev4.github.io/">
   <meta property="og:image" content="https://pgdhaev4.github.io/shindan/ogp.png">
   <meta property="og:site_name" content="診断の森">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="診断の森｜疲れているときに、心が軽くなる診断">
-  <meta name="twitter:description" content="今の悩みの要因を整理し、心理学的な視点も含めて分析したうえで、具体的な対処法を提案します。6〜9問・約2分。無料・登録不要。">
+  <meta name="twitter:title" content="診断の森｜悩みを整理する診断・笑えるタイプ診断・読みもの">
+  <meta name="twitter:description" content="気持ちを整理したい日も、ちょっと笑いたい日も。今の悩みを整理する診断5種類・笑えるタイプ診断17種類・読みもの40本。無料・登録不要。">
   <meta name="twitter:image" content="https://pgdhaev4.github.io/shindan/ogp.png">
   <meta name="google-adsense-account" content="ca-pub-3934206444145241">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3934206444145241" crossorigin="anonymous"></script>
   <link rel="canonical" href="https://pgdhaev4.github.io/">
   <link rel="stylesheet" href="/shindan/kokoro_app/style.css">
   <style>
-    /* 入口ページ（kokoro_app/index.html）と同じ配色の上書き：重要箇所だけ一段深い森色 */
-    :root { --forest: #2a4d35; --forest-line: #3b6a47; }
+    /* 診断の森の色：森の緑を基調に、カテゴリーごとに差し色（①森の緑 ②タイプ診断は各シリーズの色 ③読みもの＝深い青緑） */
+    :root { --forest: #2a4d35; --forest-line: #3b6a47; --moss: #5c8a63; --read: #2f5d62; --read-lt: #e7f0ef; }
     .site-header { border-bottom-color: rgba(42,77,53,.16); }
     .site-title { color: var(--forest); font-weight: 900; }
-    .static-sec:not(.yorimichi) h2 { color: var(--forest); border-left-color: var(--forest-line); }
-    .quiz-card { border-top: 3px solid var(--forest-line); }
-    .quiz-card .qc-title { color: var(--forest); }
-    .quiz-card:hover { border-color: rgba(42,77,53,.45); border-top-color: var(--forest); }
+    .home-wrap { max-width: 980px; }
 
-    /* ★上部（ヒーロー）＝旧トップの濃い緑（オーナー「背景色だけこちらが良い」） */
+    /* ★上部（ヒーロー）＝濃い緑（オーナー「背景色だけこちらが良い」）。短くして、①の見出しが最初の画面に入るようにした */
     .page-hero {
       background: linear-gradient(160deg, #0c120e 0%, #15291d 45%, #12262c 100%);
-      color: #fff; border-radius: 0 0 22px 22px; padding: 34px 20px 30px; margin: 0 0 6px;
+      color: #fff; border-radius: 0 0 22px 22px; padding: 26px 20px 24px; margin: 0 0 4px;
       position: relative; overflow: hidden; text-align: center;
     }
     .page-hero::before {
@@ -60,47 +57,102 @@
     }
     .page-hero > * { position: relative; }
     .page-hero h1 {
-      color: #f3f7ef; font-size: clamp(1.5rem, 6.4vw, 2.4rem); line-height: 1.3; font-weight: 900; margin-bottom: 12px;
+      font-size: clamp(1.35rem, 5.6vw, 2.1rem); line-height: 1.45; font-weight: 900; margin-bottom: 10px;
       background: linear-gradient(135deg, #fff 0%, #d9e8d0 50%, #f7e0c0 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .page-hero .lead { color: rgba(255,255,255,.88); font-weight: 700; max-width: 560px; margin: 0 auto 14px; }
-    .page-hero .hero-meta { justify-content: center; }
-    .page-hero .hero-meta span {
-      background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.92);
-    }
-    .how-steps { list-style: none; max-width: 420px; margin: 18px auto 0; padding: 0; display: flex; flex-direction: column; gap: 8px; text-align: left; }
-    .how-steps li { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 12px; padding: 9px 12px; font-size: .86rem; font-weight: 700; color: rgba(255,255,255,0.93); line-height: 1.55; }
-    .how-steps b { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: #8fc08f; color: #10231a;
-      display: flex; align-items: center; justify-content: center; font-size: .85rem; }
-    .how-steps span { min-width: 0; }
-    .hero-go { display: inline-block; margin-top: 18px; background: linear-gradient(135deg, #8fc08f, #5c8a63); color: #10231a;
-      font-weight: 900; font-size: 1rem; padding: 13px 36px; border-radius: 99px; text-decoration: none; box-shadow: 0 6px 24px rgba(120,180,130,0.28); }
-    .hero-jump { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
-    .hero-jump a { white-space: nowrap; text-decoration: none; font-weight: 800; font-size: .82rem; color: #eaf4ea;
-      border: 1px solid rgba(255,255,255,0.28); border-radius: 999px; padding: 6px 13px; background: rgba(255,255,255,0.06); }
-    .hero-jump a:hover { background: rgba(255,255,255,0.14); }
+    .page-hero h1 span { display: inline-block; }
+    .page-hero .lead { color: rgba(255,255,255,.88); font-weight: 700; font-size: .9rem; line-height: 1.85; max-width: 600px; margin: 0 auto; }
 
-    /* 寄り道コーナー（4診断とは別枠に見えるよう、生成りの地・点線の枠）と、読みものの2段の行 */
-    .yorimichi { background: #fbf6ea; border: 2px dashed #e2cfa3; border-radius: 16px; padding: 16px 14px 18px; }
-    .yorimichi h2 { color: #8a6a2f; border-left-color: #d9b56a; }
-    .yr-grid { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
-    .yr-card { display: flex; align-items: center; gap: 12px; background: #fff; border: 1px solid #ecdcb6; border-radius: 14px; padding: 10px 14px; text-decoration: none; color: var(--ink); transition: .18s; }
-    .yr-card:hover { transform: translateY(-1px); border-color: #d9b56a; }
-    .yr-img { width: 56px; height: 56px; flex-shrink: 0; border-radius: 12px; background: #fdf3dc; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; overflow: hidden; }
-    .yr-img img { width: 100%; height: 100%; object-fit: contain; }
-    .yr-body { display: flex; flex-direction: column; min-width: 0; }
-    .yr-title { font-weight: 900; font-size: .98rem; color: #6f5320; }
-    .yr-desc { font-size: .8rem; color: var(--ink-soft); line-height: 1.6; margin-top: 2px; }
-    .yr-card .arrow, .rd-list .arrow { margin-left: auto; color: var(--muted); flex-shrink: 0; }
-    .rd-text { display: flex; flex-direction: column; min-width: 0; }
-    .rd-hook { font-weight: 800; }
-    .rd-title { font-size: .78rem; font-weight: 700; color: var(--muted); margin-top: 2px; }
-    .rd-more { text-align: center; margin-top: 14px; }
-    .rd-more .btn-sub { display: inline-block; text-decoration: none; }
+    /* カテゴリーの見出し＝森の案内板（左に小さな札・下に細い線） */
+    .cat { padding: 24px 0 10px; }
+    .cat-head { display: flex; gap: 12px; align-items: flex-start; padding-bottom: 12px; margin-bottom: 14px; border-bottom: 2px solid var(--cat-line, var(--line)); }
+    .cat-ico { flex-shrink: 0; width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.45rem; background: var(--cat-bg, var(--green-lt)); }
+    .cat-head h2 { font-size: clamp(1.08rem, 4.4vw, 1.3rem); font-weight: 900; line-height: 1.45; color: var(--cat-ink, var(--forest)); margin: 2px 0 4px; border: 0; padding: 0; }
+    .cat-head .cat-lead { font-size: .86rem; line-height: 1.8; color: var(--ink-soft); margin: 0; }
+    .cat-ask { font-weight: 900; color: var(--forest); font-size: .98rem; margin: 0 0 10px; }
+    .cat-kokoro { --cat-line: rgba(59,106,71,.35); --cat-bg: #e3efe2; --cat-ink: var(--forest); }
+    .cat-type   { --cat-line: rgba(176,122,56,.35); --cat-bg: #fbefdc; --cat-ink: #7a5320; }
+    .cat-read   { --cat-line: rgba(47,93,98,.35);  --cat-bg: var(--read-lt); --cat-ink: var(--read); }
+
+    /* ① 困りごと型5診断のカード */
+    .kokoro-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+    /* 照査04 #15：PCで 3＋2 の右下が空いて欠けて見えた→最後の行を中央に寄せる（flex） */
+    @media (min-width: 640px) { .kokoro-grid { display: flex; flex-wrap: wrap; justify-content: center; } .kokoro-grid > .kc { flex: 0 1 calc(50% - 6px); } }
+    @media (min-width: 920px) { .kokoro-grid > .kc { flex-basis: calc((100% - 24px) / 3); } }
+    .kc { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid var(--line); border-top: 3px solid var(--forest-line);
+      border-radius: 16px; padding: 14px 16px 13px; text-decoration: none; color: var(--ink); box-shadow: var(--shadow); transition: .18s; }
+    .kc:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); border-color: rgba(42,77,53,.45); border-top-color: var(--forest); }
+    .kc-top { display: flex; align-items: center; gap: 10px; }
+    .kc-emoji { font-size: 1.5rem; flex-shrink: 0; }
+    .kc-title { font-size: 1rem; font-weight: 900; line-height: 1.45; color: var(--forest); }
+    .kc-desc { font-size: .84rem; line-height: 1.75; color: var(--ink-soft); }
+    .kc-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 4px; }
+    .kc-meta { font-size: .78rem; font-weight: 700; color: var(--muted); }
+    .kc-go { font-size: .82rem; font-weight: 900; color: #fff; background: var(--forest-line); border-radius: 999px; padding: 5px 12px; white-space: nowrap; }
+
+    /* ② タイプ診断：シリーズごとの札（テーマ色はそれぞれの診断の色） */
+    .tg-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 920px) { .tg-grid { grid-template-columns: 1fr 1fr 1fr; align-items: start; } }
+    .tg { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--tg); border-radius: 16px; padding: 14px 14px 12px; box-shadow: var(--shadow); }
+    .tg-work { --tg: #e8743b; --tg-ink: #1b2a4a; --tg-bg: #eef1f8; }
+    .tg-love { --tg: #b0305a; --tg-ink: #7a1f3d; --tg-bg: #fbeef3; }
+    .tg-kids { --tg: #ef8a6f; --tg-ink: #8a4330; --tg-bg: #fff1ea; }
+    .tg-head { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; border-radius: 12px; }
+    .tg-head:hover .tg-name { text-decoration: underline; }
+    .tg-hd { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; }
+    .tg-img { width: 60px; height: 60px; flex-shrink: 0; border-radius: 14px; background: var(--tg-bg); display: flex; align-items: center; justify-content: center; overflow: hidden; font-size: 1.6rem; }
+    .tg-img img { width: 100%; height: 100%; object-fit: contain; }
+    .tg-name { font-size: 1.02rem; font-weight: 900; color: var(--tg-ink); line-height: 1.4; }
+    .tg-sub { font-size: .78rem; color: var(--ink-soft); line-height: 1.6; margin-top: 2px; }
+    .tg-count { display: inline-block; font-size: .72rem; font-weight: 800; color: var(--tg-ink); background: var(--tg-bg); border-radius: 999px; padding: 1px 9px; margin-top: 4px; }
+    .tg-list { list-style: none; margin: 12px 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .tg-list a { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 8px 12px; border-radius: 12px; background: var(--tg-bg);
+      text-decoration: none; color: var(--ink); border: 1px solid transparent; }
+    .tg-list a:hover { border-color: var(--tg); }
+    .tg-list .t-tx { display: flex; flex-direction: column; min-width: 0; }
+    .tg-list b { font-size: .9rem; font-weight: 900; color: var(--tg-ink); line-height: 1.4; }
+    .tg-list small { font-size: .74rem; color: var(--ink-soft); line-height: 1.5; }
+    .tg-list .arrow { margin-left: auto; color: var(--tg); font-weight: 900; flex-shrink: 0; }
+    .tg-more { margin-top: 6px; }
+    .tg-more > summary { list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 44px;
+      border: 1.5px dashed var(--tg); border-radius: 12px; font-size: .86rem; font-weight: 900; color: var(--tg-ink); background: #fff; }
+    .tg-more > summary::-webkit-details-marker { display: none; }
+    .tg-more > summary .when-open { display: none; }
+    .tg-more[open] > summary .when-open { display: inline; }
+    .tg-more[open] > summary .when-closed { display: none; }
+    .tg-more > summary::after { content: '▼'; font-size: .7rem; }
+    .tg-more[open] > summary::after { content: '▲'; }
+    .tg-top { display: block; text-align: right; margin-top: 10px; font-size: .8rem; font-weight: 800; color: var(--tg-ink); text-decoration: none; }
+    .tg-top:hover { text-decoration: underline; }
+
+    /* ③ 読みもの：3つの分野ごとに代表の記事 */
+    .rg-grid { display: grid; grid-template-columns: 1fr; gap: 14px; }
+    /* 照査04 #23：PCで恋愛の箱だけ高く「…をすべて見る」の位置が段違い→3つの箱の高さをそろえ、「すべて見る」を下端に */
+    @media (min-width: 920px) { .rg-grid { grid-template-columns: 1fr 1fr 1fr; align-items: stretch; } .rg { display: flex; flex-direction: column; } .rg .rg-more { margin-top: auto; padding-top: 10px; } }
+    .rg { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 14px 14px 12px; box-shadow: var(--shadow); }
+    .rg h3 { font-size: .98rem; font-weight: 900; color: var(--read); margin: 0 0 8px; }
+    .rg h3 small { font-size: .74rem; font-weight: 700; color: var(--muted); margin-left: 6px; }
+    .rg-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+    .rg-list a { display: flex; align-items: center; gap: 8px; padding: 9px 12px; border-radius: 12px; background: var(--read-lt); text-decoration: none; color: var(--ink); border: 1px solid transparent; }
+    .rg-list a:hover { border-color: var(--read); }
+    .rg-list .r-tx { display: flex; flex-direction: column; min-width: 0; }
+    .rg-list .r-hook { font-size: .86rem; font-weight: 800; line-height: 1.55; }
+    .rg-list .r-title { font-size: .74rem; font-weight: 700; color: var(--read); line-height: 1.5; margin-top: 2px; }
+    .rg-list .arrow { margin-left: auto; color: var(--read); flex-shrink: 0; }
+    /* 短い見出し・題名は行の長さをそろえる（wrap.py：幅320で「…やわらげる／方法」） */
+    .rg-list .r-hook, .rg-list .r-title, .tg-list b, .tg-list small, .kc-title { text-wrap: balance; }
+    .rg-more { display: block; text-align: right; margin-top: 10px; font-size: .8rem; font-weight: 800; color: var(--read); text-decoration: none; }
+    .rg-more:hover { text-decoration: underline; }
+    .disclaimer a { color: var(--green-dk); font-weight: 700; }   /* 照査04 #22：「こころの耳」だけブラウザ既定の青だった */
+    .rd-all { text-align: center; margin-top: 16px; }
+    .rd-all a { display: inline-flex; align-items: center; gap: 6px; min-height: 46px; padding: 10px 22px; border-radius: 999px; background: var(--read); color: #fff;
+      font-weight: 900; font-size: .9rem; text-decoration: none; }
+    .rd-all a:hover { background: #244a4e; }
 
     /* LINEスタンプ（旧トップから移した）と X・YouTube の案内（2026-10-24 オーナー指示） */
+    .static-sec h2 { color: var(--forest); border-left-color: var(--forest-line); }
     .stamp-list { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
     @media (min-width: 640px) { .stamp-list { grid-template-columns: 2fr 1fr; } }
     .stamp-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
@@ -131,99 +183,166 @@
   </header>
 
   <div class="page-hero">
-    <h1>疲れているときに、心が軽くなる診断</h1>
-    <p class="lead">
-      今の悩みの要因を整理し、心理学的な視点も含めて分析したうえで、具体的な対処法を提案します。
-    </p>
-    <div class="hero-meta">
-      <span>⏱ 1つ約2分・6〜9問</span><span>📱 会員登録・個人情報入力なし</span><span>🌱 点数はつけません</span>
-    </div>
-    <!-- 2026-10-24 オーナー指示「利用者が読んだらすぐサイト内容がわかるように」：使い方を3つの手順で -->
-    <ol class="how-steps" aria-label="使い方">
-      <li><b>1</b><span>下の5つから、今の自分に近いものを1つ選ぶ</span></li>
-      <li><b>2</b><span>6〜9問に答える（約2分・無料）</span></li>
-      <li><b>3</b><span>今の状態と、今日からできること1つが分かる</span></li>
-    </ol>
-    <a class="hero-go" href="#shindan">診断を選ぶ ↓</a>
-    <!-- 2026-10-24 オーナー「スタンプがホーム画面に表示されていない」：欄はあったがページの下の方（3画面以上下）で見つからなかった → 上からすぐ飛べる目次 -->
-    <nav class="hero-jump" aria-label="このページの中身">
-      <a href="#shindan">🌿 診断</a><a href="#yorimichi">🎈 寄り道</a><a href="#yomimono">📚 読みもの</a><a href="#stamp">💬 LINEスタンプ</a>
-    </nav>
+    <h1><span>気持ちを整理したい日も、</span><span>ちょっと笑いたい日も。</span></h1>
+    <p class="lead">今の悩みを整理する診断、自分を笑えるタイプ診断、明日を少し楽にする読みもの。<br>どれも無料・会員登録なしで使えます。</p>
   </div>
 
-  <div class="wrap">
+  <div class="wrap home-wrap">
 
-    <section class="static-sec" id="shindan">
-      <h2>今日は、どの入口にしますか</h2>
-      <p>近いものをひとつ選んでください。</p>
-
-      <div class="quiz-grid">
-        <a class="quiz-card" href="/shindan/kokoro_app/yameru.html">
-          <span class="qc-emoji">🧭</span>
-          <p class="qc-title">会社を辞めるか迷っている診断</p>
-          <p class="qc-desc">辞めるか続けるかで迷っているときに、何が迷いを止めているのか、まず何を確かめればいいのかを整理します。結論は出しません。</p>
-          <p class="qc-meta">6問・約2分／今の状態と今日できること</p>
+    <!-- ① 今の悩みを整理する診断（困りごと型・5種類） -->
+    <section class="cat cat-kokoro" id="shindan">
+      <div class="cat-head">
+        <span class="cat-ico" aria-hidden="true">🌿</span>
+        <div>
+          <h2>今の悩みを整理する診断</h2>
+          <p class="cat-lead">今の悩みの要因を整理し、心理学的な視点も含めて分析したうえで、具体的な対処法を提案します。</p>
+        </div>
+      </div>
+      <p class="cat-ask">今日は、何に疲れていますか？</p>
+      <div class="kokoro-grid">
+        <a class="kc" href="/shindan/kokoro_app/yameru.html">
+          <span class="kc-top"><span class="kc-emoji" aria-hidden="true">🧭</span><span class="kc-title">会社を辞めるか迷っている診断</span></span>
+          <span class="kc-desc">迷いを止めているものを整理し、まず確かめることが分かります。結論は押しつけません。</span>
+          <span class="kc-foot"><span class="kc-meta">⏱ 約2分・6問</span><span class="kc-go">診断する →</span></span>
         </a>
-        <a class="quiz-card" href="/shindan/kokoro_app/kekkon-aseri.html">
-          <span class="qc-emoji">🕰️</span>
-          <p class="qc-title">結婚を焦ってしまう気持ち診断</p>
-          <p class="qc-desc">結婚のことで焦るときに、何が焦りのもとになっているのか、まず何をすればいいのかを整理します。結婚を勧める診断ではありません。</p>
-          <p class="qc-meta">6問・約2分／今の状態と今日できること</p>
+        <a class="kc" href="/shindan/kokoro_app/kekkon-aseri.html">
+          <span class="kc-top"><span class="kc-emoji" aria-hidden="true">🕰️</span><span class="kc-title">結婚を焦ってしまう気持ち診断</span></span>
+          <span class="kc-desc">焦りのもとを整理し、まずできることが分かります。結婚を勧める診断ではありません。</span>
+          <span class="kc-foot"><span class="kc-meta">⏱ 約2分・6問</span><span class="kc-go">診断する →</span></span>
         </a>
-        <a class="quiz-card" href="/shindan/kokoro_app/renai-jishin.html">
-          <span class="qc-emoji">💗</span>
-          <p class="qc-title">恋愛で自信をなくした診断</p>
-          <p class="qc-desc">恋愛で自信が揺れたときに、何が起きているのか、まず何をすればいいのかを整理します。別れや告白は勧めません。</p>
-          <p class="qc-meta">6問・約2分／今の状態と今日できること</p>
+        <a class="kc" href="/shindan/kokoro_app/renai-jishin.html">
+          <span class="kc-top"><span class="kc-emoji" aria-hidden="true">💗</span><span class="kc-title">恋愛で自信をなくした診断</span></span>
+          <span class="kc-desc">自信が揺れた理由を整理し、まずできることが分かります。別れや告白は勧めません。</span>
+          <span class="kc-foot"><span class="kc-meta">⏱ 約2分・6問</span><span class="kc-go">診断する →</span></span>
         </a>
-        <a class="quiz-card" href="/shindan/kokoro_app/kosodate-tsukare.html">
-          <span class="qc-emoji">🌙</span>
-          <p class="qc-title">子育てに疲れた診断</p>
-          <p class="qc-desc">子育てで何に疲れているのか、なぜつらくなりやすいのか、まず何を減らしたり頼ったりすればいいのかを整理します。</p>
-          <p class="qc-meta">6問・約2分／今の状態と今日できること</p>
+        <a class="kc" href="/shindan/kokoro_app/kosodate-tsukare.html">
+          <span class="kc-top"><span class="kc-emoji" aria-hidden="true">🌙</span><span class="kc-title">子育てに疲れた診断</span></span>
+          <span class="kc-desc">何に疲れているのかを整理し、減らせること・頼れる先が分かります。</span>
+          <span class="kc-foot"><span class="kc-meta">⏱ 約2分・6問</span><span class="kc-go">診断する →</span></span>
         </a>
-        <a class="quiz-card" href="/shindan/kokoro_app/hitozukiai.html">
-          <span class="qc-emoji">🫧</span>
-          <p class="qc-title">職場の人付き合いに疲れた診断</p>
-          <p class="qc-desc">職場の人付き合いで何に疲れているのか、なぜつらくなりやすいのか、まず何をすればいいのかを整理します。</p>
-          <p class="qc-meta">8〜9問・約2分／今の状態と今日できること</p>
+        <a class="kc" href="/shindan/kokoro_app/hitozukiai.html">
+          <span class="kc-top"><span class="kc-emoji" aria-hidden="true">🫧</span><span class="kc-title">職場の人付き合いに疲れた診断</span></span>
+          <span class="kc-desc">人付き合いの何に疲れているのかを整理し、まずできることが分かります。</span>
+          <span class="kc-foot"><span class="kc-meta">⏱ 約2分・8〜9問</span><span class="kc-go">診断する →</span></span>
         </a>
       </div>
     </section>
 
-    <section class="static-sec yorimichi" id="yorimichi">
-      <h2>まだ元気があれば、寄り道してください</h2>
-      <p>こんな診断もあります。上の5つとは別の、ちょっと笑って帰れる診断です。</p>
-      <div class="yr-grid">
-        <a class="yr-card" href="/shindan/workplace_app/">
-          <span class="yr-img"><img src="/shindan/workplace_app/images/shachiku_zangyo_gorilla.png" alt="" loading="lazy" onerror="this.parentElement.innerHTML='💼'"></span>
-          <span class="yr-body"><span class="yr-title">会社モンスター診断</span><span class="yr-desc">職場でしんどい日に、自分をモンスターにたとえて笑って帰る診断</span></span>
-          <span class="arrow">›</span>
-        </a>
-        <a class="yr-card" href="/shindan/kosodate_app/">
-          <span class="yr-img"><img src="/shindan/kosodate_app/images/parent_7_dragon.png" alt="" loading="lazy" onerror="this.parentElement.innerHTML='👶'"></span>
-          <span class="yr-body"><span class="yr-title">子育て親タイプ診断</span><span class="yr-desc">今日もおつかれさまでした。子育ての自分を、キャラにして眺める診断</span></span>
-          <span class="arrow">›</span>
-        </a>
-        <a class="yr-card" href="/shindan/psychology_app/">
-          <span class="yr-img"><img src="/shindan/psychology_app/images/chars_new/元カレ監視衛星.png" alt="" loading="lazy" onerror="this.parentElement.innerHTML='💖'"></span>
-          <span class="yr-body"><span class="yr-title">恋愛沼診断</span><span class="yr-desc">恋のことで頭がいっぱいの日に、自分の「沼」を笑ってみる診断</span></span>
-          <span class="arrow">›</span>
-        </a>
+    <!-- ② ちょっと笑える・タイプ診断（17種類＝会社4・恋愛7・子育て6）。id は旧「寄り道」へのリンクのために yorimichi のまま -->
+    <section class="cat cat-type" id="yorimichi">
+      <div class="cat-head">
+        <span class="cat-ico" aria-hidden="true">🎭</span>
+        <div>
+          <h2>ちょっと笑える・タイプ診断</h2>
+          <p class="cat-lead">自分をキャラクターにたとえて、くすっと笑える遊びの診断です。3つのシリーズに全17種類。1つ約1〜2分。</p>
+        </div>
+      </div>
+      <div class="tg-grid">
+
+        <div class="tg tg-work">
+          <a class="tg-head" href="/shindan/workplace_app/">
+            <span class="tg-img"><img src="/shindan/workplace_app/images/shachiku_zangyo_gorilla.png" alt="" width="60" height="60" loading="lazy" onerror="this.parentElement.textContent='💼'"></span>
+            <span class="tg-hd"><span class="tg-name">会社モンスター診断</span><span class="tg-sub">職場での自分を、モンスターにたとえる</span><span class="tg-count">全4種類</span></span>
+          </a>
+          <ul class="tg-list">
+            <li><a href="/shindan/workplace_app/salaryman.html"><span class="t-tx"><b>モンスター度診断</b><small>定時の妖精から社畜神まで、あなたはどれ？</small></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/workplace_app/boss.html"><span class="t-tx"><b>上司適性診断</b><small>野生ライオン？神上司ユニコーン？</small></span><span class="arrow">›</span></a></li>
+          </ul>
+          <details class="tg-more">
+            <summary><span class="when-closed">すべての診断を見る（あと2種類）</span><span class="when-open">閉じる</span></summary>
+            <ul class="tg-list">
+              <li><a href="/shindan/workplace_app/stress.html"><span class="t-tx"><b>職場ストレス耐性診断</b><small>ガラスハートか、感情削除AIか</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/workplace_app/secret.html"><span class="t-tx"><b>会社での裏評価診断</b><small>同僚から見たあなたは、何の妖精？</small></span><span class="arrow">›</span></a></li>
+            </ul>
+          </details>
+          <a class="tg-top" href="/shindan/workplace_app/">キャラ図鑑・4つ達成の特典はこちら ›</a>
+        </div>
+
+        <div class="tg tg-love">
+          <a class="tg-head" href="/shindan/psychology_app/">
+            <span class="tg-img"><img src="/shindan/psychology_app/images/chars_new/元カレ監視衛星.png" alt="" width="60" height="60" loading="lazy" onerror="this.parentElement.textContent='💖'"></span>
+            <span class="tg-hd"><span class="tg-name">恋愛沼診断</span><span class="tg-sub">恋をしている自分の「沼」を、笑ってみる</span><span class="tg-count">全7種類</span></span>
+          </a>
+          <ul class="tg-list">
+            <li><a href="/shindan/psychology_app/love_type.html"><span class="t-tx"><b>あなたが恋愛で沼る理由診断</b><small>いちばん人気。沼るパターンをキャラで</small></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/psychology_app/love_dependency.html"><span class="t-tx"><b>好きになると人生狂う度診断</b><small>恋愛脳のレベルを、遊び感覚で</small></span><span class="arrow">›</span></a></li>
+          </ul>
+          <details class="tg-more">
+            <summary><span class="when-closed">すべての診断を見る（あと5種類）</span><span class="when-open">閉じる</span></summary>
+            <ul class="tg-list">
+              <li><a href="/shindan/psychology_app/heartbreak.html"><span class="t-tx"><b>元恋人を忘れられない度診断</b><small>未練のレベルを、こっそりチェック</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/psychology_app/jealousy.html"><span class="t-tx"><b>重い女・重い男度診断</b><small>独占欲と束縛のスタイル</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/psychology_app/compatibility.html"><span class="t-tx"><b>恋愛相性診断</b><small>すれ違いやすい相手のタイプ</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/psychology_app/ideal_date.html"><span class="t-tx"><b>理想のデートタイプ診断</b><small>あなたがいちばん楽しめるデート</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/psychology_app/mbti.html"><span class="t-tx"><b>性格タイプ診断</b><small>恋愛での性格の出方を、タイプで</small></span><span class="arrow">›</span></a></li>
+            </ul>
+          </details>
+          <a class="tg-top" href="/shindan/psychology_app/">キャラ図鑑・4つ達成の特典はこちら ›</a>
+        </div>
+
+        <div class="tg tg-kids">
+          <a class="tg-head" href="/shindan/kosodate_app/">
+            <span class="tg-img"><img src="/shindan/kosodate_app/images/parent_7_dragon.png" alt="" width="60" height="60" loading="lazy" onerror="this.parentElement.textContent='👶'"></span>
+            <span class="tg-hd"><span class="tg-name">子育て親タイプ診断</span><span class="tg-sub">子育て中の自分を、キャラにして眺める</span><span class="tg-count">全6種類</span></span>
+          </a>
+          <ul class="tg-list">
+            <li><a href="/shindan/kosodate_app/parent_type.html"><span class="t-tx"><b>親タイプ診断</b><small>おやつ財閥総裁？子育てブッダ？</small></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/kosodate_app/true_nature.html"><span class="t-tx"><b>育児中のキャラ診断</b><small>笑えて、ちょっと泣ける育児あるある</small></span><span class="arrow">›</span></a></li>
+          </ul>
+          <details class="tg-more">
+            <summary><span class="when-closed">すべての診断を見る（あと4種類）</span><span class="when-open">閉じる</span></summary>
+            <ul class="tg-list">
+              <li><a href="/shindan/kosodate_app/child_view.html"><span class="t-tx"><b>子供から見た親診断</b><small>子どもの目に映る、わが家</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/kosodate_app/couple_balance.html"><span class="t-tx"><b>夫婦育児バランス診断</b><small>夫婦の育児分担の、リアル</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/kosodate_app/expectation.html"><span class="t-tx"><b>子供への期待度診断</b><small>のびのび応援団？東大予約センター？</small></span><span class="arrow">›</span></a></li>
+              <li><a href="/shindan/kosodate_app/future_relation.html"><span class="t-tx"><b>将来の親子関係診断</b><small>未来の親子を、遊びで想像</small></span><span class="arrow">›</span></a></li>
+            </ul>
+          </details>
+          <a class="tg-top" href="/shindan/kosodate_app/">キャラ図鑑・4つ達成の特典はこちら ›</a>
+        </div>
+
       </div>
     </section>
 
-    <section class="static-sec" id="yomimono">
-      <h2>明日を少し楽にする読みもの</h2>
-      <p>診断のあとでも、読んでみたい記事だけでも。<br>気になったものを、ひとつだけどうぞ。</p>
-      <div class="rel-list rd-list">
-        <a href="/shindan/workplace_app/articles/yasumenai.html"><span class="rd-text"><span class="rd-hook">休んでいるのに、なぜか休めた気がしない人へ</span><span class="rd-title">→ 休むのが苦手な人のための休み方入門</span></span><span class="arrow">›</span></a>
-        <a href="/shindan/workplace_app/articles/ningenkankei.html"><span class="rd-text"><span class="rd-hook">職場の人間関係で、毎日ちょっとずつ疲れている人へ</span><span class="rd-title">→ 職場の人間関係に疲れた時の考え方</span></span><span class="arrow">›</span></a>
-        <a href="/shindan/workplace_app/articles/kotowari.html"><span class="rd-text"><span class="rd-hook">頼まれると、つい「いいですよ」と言ってしまう人へ</span><span class="rd-title">→ 仕事を断れない人のための上手な断り方</span></span><span class="arrow">›</span></a>
-        <a href="/shindan/kosodate_app/articles/kanpeki.html"><span class="rd-text"><span class="rd-hook">ちゃんとやろうとするほど、苦しくなってしまう人へ</span><span class="rd-title">→ 完璧主義を手放して楽になる考え方</span></span><span class="arrow">›</span></a>
-        <a href="/shindan/psychology_app/articles/fuan.html"><span class="rd-text"><span class="rd-hook">まだ起きていないことまで、頭の中で考え続けてしまう人へ</span><span class="rd-title">→ 不安になりやすいクセをやわらげる方法</span></span><span class="arrow">›</span></a>
+    <!-- ③ 明日を少し楽にする読みもの（40本＝仕事15・恋愛13・子育て12） -->
+    <section class="cat cat-read" id="yomimono">
+      <div class="cat-head">
+        <span class="cat-ico" aria-hidden="true">📚</span>
+        <div>
+          <h2>明日を少し楽にする読みもの</h2>
+          <p class="cat-lead">仕事・恋愛・子育てで少し疲れたときに読む、今日からできることを書いた記事です。全40本。</p>
+        </div>
       </div>
-      <p class="rd-more"><a class="btn-sub" href="/shindan/articles.html">📚 読みものの一覧を見る</a></p>
+      <div class="rg-grid">
+        <div class="rg">
+          <h3>💼 仕事・職場<small>15本</small></h3>
+          <ul class="rg-list">
+            <li><a href="/shindan/workplace_app/articles/yasumenai.html"><span class="r-tx"><span class="r-hook">休みの日も、なぜか休めた気がしない</span><span class="r-title">休むのが苦手な人のための休み方入門</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/workplace_app/articles/ningenkankei.html"><span class="r-tx"><span class="r-hook">職場の人間関係で、毎日少しずつ疲れる</span><span class="r-title">職場の人間関係に疲れた時の考え方</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/workplace_app/articles/kotowari.html"><span class="r-tx"><span class="r-hook">頼まれると、つい引き受けてしまう</span><span class="r-title">仕事を断れない人のための上手な断り方</span></span><span class="arrow">›</span></a></li>
+          </ul>
+          <a class="rg-more" href="/shindan/articles.html#work">仕事・職場の読みものをすべて見る ›</a>
+        </div>
+        <div class="rg">
+          <h3>💖 恋愛<small>13本</small></h3>
+          <ul class="rg-list">
+            <li><a href="/shindan/psychology_app/articles/fuan.html"><span class="r-tx"><span class="r-hook">まだ起きていないことまで、考えて不安になる</span><span class="r-title">不安になりやすい恋愛グセをやわらげる方法</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/psychology_app/articles/henshin-osoi.html"><span class="r-tx"><span class="r-hook">返信が来ないだけで、落ち着かなくなる</span><span class="r-title">返信が遅い相手に不安にならないための考え方</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/psychology_app/articles/shitsuren.html"><span class="r-tx"><span class="r-hook">終わった恋を、まだ引きずっている</span><span class="r-title">失恋を引きずっているときの心の整理術</span></span><span class="arrow">›</span></a></li>
+          </ul>
+          <a class="rg-more" href="/shindan/articles.html#love">恋愛の読みものをすべて見る ›</a>
+        </div>
+        <div class="rg">
+          <h3>👶 子育て<small>12本</small></h3>
+          <ul class="rg-list">
+            <li><a href="/shindan/kosodate_app/articles/shikarisugi.html"><span class="r-tx"><span class="r-hook">子どもに強く言いすぎて、あとで落ち込む</span><span class="r-title">子どもを叱りすぎたと感じた時の対処法</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/kosodate_app/articles/hayaku.html"><span class="r-tx"><span class="r-hook">朝の「早くしなさい」が止まらない</span><span class="r-title">「早くしなさい」を減らす朝の工夫</span></span><span class="arrow">›</span></a></li>
+            <li><a href="/shindan/kosodate_app/articles/oya-jikan.html"><span class="r-tx"><span class="r-hook">自分の時間が、まったく取れない</span><span class="r-title">育児中に自分の時間をつくる方法</span></span><span class="arrow">›</span></a></li>
+          </ul>
+          <a class="rg-more" href="/shindan/articles.html#kids">子育ての読みものをすべて見る ›</a>
+        </div>
+      </div>
+      <p class="rd-all"><a href="/shindan/articles.html">📚 すべての読みものを見る（40本）</a></p>
     </section>
 
     <section class="static-sec" id="stamp">
@@ -263,20 +382,18 @@
       <details class="faq-fold"><summary>よくある質問</summary>
       <dl class="faq">
         <dt>無料ですか？</dt>
-        <dd>診断はすべて無料で、会員登録も必要ありません。氏名やメールアドレスの入力もありません。（結果ページから、有料の記事〈note・200円〉をご案内することがあります。購入しなくても、無料の結果はすべてご覧いただけます。）</dd>
+        <dd>診断と読みものはすべて無料で、会員登録も必要ありません。氏名やメールアドレスの入力もありません。（「今の悩みを整理する診断」の結果ページから有料の記事〈note・200円〉を、タイプ診断の「4つ達成の特典」から完全版〈note・300円〉をご案内することがあります。購入は任意で、無料の結果はすべてご覧いただけます。）</dd>
         <dt>回答は外部に送信されますか？</dt>
         <dd>診断への回答内容はサーバーへ送信せず、お使いのブラウザ内で処理します。表示された結果の種類だけ、どの診断がどれくらい使われているかを知るための匿名の集計として送信します（回答内容・個人を特定する情報は送りません）。なお当サイトではアクセス解析（Googleアナリティクス）と広告配信（Google AdSense）を利用しており、それらに伴う情報の取扱いは<a href="/shindan/privacy.html">プライバシーポリシー</a>をご確認ください。</dd>
         <dt>結果が当たっていない気がします。</dt>
-        <dd>これらの診断は、当てることより「今の困りごとを整理する手がかり」をお渡しすることを目的にしています。しっくりこない部分は、そのまま置いていってかまいません。</dd>
+        <dd>「今の悩みを整理する診断」は、当てることより「今の困りごとを整理する手がかり」をお渡しすることを目的にしています。タイプ診断は遊びとして楽しむものです。しっくりこない部分は、そのまま置いていってかまいません。</dd>
         <dt>何度でもできますか？</dt>
         <dd>できます。日によって答えは変わります。変わるのが普通です。</dd>
       </dl></details>
 
       <div class="disclaimer">
         <strong>※これらの診断について</strong><br>
-        気持ちを整理するきっかけづくりを目的とした読みものです。医学的・心理学的な検査や診断ではなく、
-        病気の有無を判定するものではありません。結果に優劣はありません。
-        診断への回答内容はサーバーへ送信せず、お使いのブラウザ内で処理します。表示された結果の種類だけ、匿名の集計として送信します。
+        「今の悩みを整理する診断」は、気持ちを整理するきっかけづくりを目的とした読みものです。「ちょっと笑える・タイプ診断」は、遊びとして楽しむ診断です。どちらも医学的な検査や診断ではなく、病気の有無を判定するものではありません。結果に優劣はありません。診断への回答内容はサーバーへ送信せず、お使いのブラウザ内で処理します。表示された結果の種類だけ、匿名の集計として送信します。
         <p class="soudan-head">以下に相談できます。</p>
         <ul class="soudan-list">
           <li><span class="when">気持ちのつらさが続くとき</span><a href="https://kokoro.mhlw.go.jp/" target="_blank" rel="noopener">こころの耳（厚生労働省）</a></li>
